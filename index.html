@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js_1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Notes</h1>
+    <div id="notes">
+        <div class="note" id="head">
+            <span>Name</span>
+            <span>Created</span>
+            <span>Category</span>
+            <span>Content</span>
+            <span>Dates</span>
+            <span>
+                <span id="archive_all_btn" class="archiveButton span_buttons"></span>
+                <span class='delete_btn span_buttons' id="delete_all_btn"></span>
+            </span>
+        </div>
+    </div>
+    <div id="createNote">
+        <form id="form">
+            <input type="text" id="noteName" placeholder="Note name" required>
+            <label for="noteCategory">Note category:</label>
+            <select name="category" id="noteCategory">
+                <option value="Task">Task</option>
+                <option value="Random Thought">Random Thought</option>
+                <option value="Idea">Idea</option>
+            </select>
+            <input type="text" id="noteContent" placeholder="Content" required>
+            <input type="date" id="noteDate" min="1625051690759">
+            <button id="create_note" type="submit">Create Note</button>
+        </form>
+    </div>
+    <div id="notesCount">
+        <div class="note">
+            <span>Category</span><span>Active</span><span>Archived</span>
+        </div>
+        <div id="Task" class="note">
+            <span>category</span><span>active</span><span>archived</span>
+        </div>
+        <div  id="Random_Thought" class="note">
+            <span></span><span></span><span></span>
+        </div>
+        <div id="Idea" class="note">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+<h1>Archived Notes</h1>
+    <div id="archivedNotes">
+        <div class="note">
+            <span>Name</span>
+            <span>Created</span>
+            <span>Category</span>
+            <span>Content</span>
+            <span>Dates</span>
+            <span></span>
+        </div>
+    </div>
+    <form id="editForm">
+        <input type="text" id="editNoteName" placeholder="Note name" required>
+        <label for="editNoteCategory">Note category:</label>
+        <select name="category" id="editNoteCategory">
+            <option value="Task">Task</option>
+            <option value="Random Thought">Random Thought</option>
+            <option value="Idea">Idea</option>
+        </select>
+        <input type="text" id="editNoteContent" placeholder="Content" required>
+        <input type="date" id="editNoteDate">
+        <button id="editNote" type="submit">Edit Note</button>
+    </form>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
